@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Oval&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Sedgwick+Ave+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/bgimg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  background-color: #000;
+  font: 700;
+  line-height: 300px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'Nova Oval', cursive, sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-size: 30px;
+}
+
+.box::before,
+.box::after{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  top: -15px;
+  left: -15px;
+  border-radius: 8px;
+  background: linear-gradient(45deg,#D80032,#FFFD82,#E84855,#E36414,#FF47DA,#DE541E,#2AB7CA,#E6F9AF,#C2E812,#FB8B24);
+  background-size: 300%;
+  animation: border 12s linear infinite;
+}
+
+.box::after{
+  filter: blur(50px);
+}
+
+@keyframes border {
+  0%,100%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300%;
+  }
+}
+
+
